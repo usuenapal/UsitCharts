@@ -63,3 +63,5 @@ let circleChart = UsitCircleChart(frame: yourFrame)
 circleChart.percent = 80 /* The percent to fill. */
 circleChart.strokeChart()
 ```
+
+By Usit Development(www.usitdevelopment.com)
