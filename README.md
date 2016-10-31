@@ -27,6 +27,8 @@ chart.addAxisXValueTitles(["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug
 chart.addAxisTitles("Months", y: "Expenses") /* Axis titles. */
 chart.strokeChart()
 ```
+<img src="https://github.com/usuenapal/UsitCharts/blob/master/bar.png" width="320px">
+
 
 ###Stack Bar Chart
 To create a stack bar chart view just write this code:
@@ -42,6 +44,8 @@ chart = UsitStackBarChart(frame: yourFrame)
 chart.addAxisTitles("Something", y: "Some Sum") /* Axis titles. */
 chart.strokeChart()
 ```
+<img src="https://github.com/usuenapal/UsitCharts/blob/master/stackbar.png" width="320px">
+
 
 ###Points Chart
 To create a points chart view just write this code:
@@ -54,6 +58,8 @@ chart.addAxisXValueTitles(["1986", "1987", "1988", "1989", "1990", "1991", "1992
 chart.addAxisTitles("Days", y: "Hours of work") /* Axis titles. */
 chart.strokeChart()
 ```
+<img src="https://github.com/usuenapal/UsitCharts/blob/master/line.png" width="320px">
+
 
 ###Circle Chart
 To create a circle chart view just write this code:
@@ -63,5 +69,7 @@ let circleChart = UsitCircleChart(frame: yourFrame)
 circleChart.percent = 80 /* The percent to fill. */
 circleChart.strokeChart()
 ```
+<img src="https://github.com/usuenapal/UsitCharts/blob/master/circle.png" width="320px">
+
 
 By Usit Development(www.usitdevelopment.com)
