@@ -8,15 +8,16 @@
 
 import UIKit
 
-class UsitCircleChart: UIView
+class UsitCircleChart: UsitChart
 {
     var percent:CGFloat = 100
-    let innerChartMargin: CGFloat = 25.0
+    
+    override func drawFrame() {}
     
     
     //MARK: Circle
     
-    func strokeChart()
+    override func strokeChart()
     {
         drawCircle(percent: 100.0, color: kChart.Colors.CircleBg, animate: false)   //Draw BG
         drawCircle(percent: percent, color: kChart.Colors.Circle, animate: true)    //Draw percent
@@ -56,20 +57,8 @@ class UsitCircleChart: UIView
         layer.addSublayer(circleLayer)
         
         if animate.boolValue {
-            animateCircle(circleLayer)
+            circleLayer.strokeEnd = 1.0
+            animateLayer(circleLayer)
         }
-    }
-    
-    func animateCircle(_ circleLayer: CAShapeLayer)
-    {
-        let animation = CABasicAnimation(keyPath: "strokeEnd")
-        
-        animation.duration = 0.8
-        animation.fromValue = 0
-        animation.toValue = 1
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-        
-        circleLayer.strokeEnd = 1.0
-        circleLayer.add(animation, forKey: "animateCircle")
     }
 }

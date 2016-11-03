@@ -79,13 +79,18 @@ class UsitChart: UIView
     {
         super.init(frame: frame)
         
-        drawContent()
-        drawAxis()
+        drawFrame()
     }
     
     required init?(coder aDecoder: NSCoder)
     {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func drawFrame()
+    {
+        drawContent()
+        drawAxis()
     }
     
     
