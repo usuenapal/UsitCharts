@@ -1,5 +1,5 @@
 # UsitCharts
-Library to draw different chars. 
+Library to draw different chars. Last version on ```Branch v1.0```.
 
 ##Language
 Swift 
