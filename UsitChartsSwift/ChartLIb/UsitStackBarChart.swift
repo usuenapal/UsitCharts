@@ -57,10 +57,10 @@ class UsitStackBarChart: UsitBarChart
                 let arrayVals = (stackValues[j] as? [NSNumber])
                 
                 if i < (arrayVals)!.count {
-                    sum += (arrayVals!)[i].intValue
+                    sum += Int32((arrayVals!)[i].intValue)
                 } else {
                     (arrayVals as AnyObject).insert(NSNumber(value: 0 as Int32), at: i)
-                    stackValues[j] = arrayVals
+                    stackValues[j] = arrayVals ?? []
                 }
             }
             
@@ -90,7 +90,7 @@ class UsitStackBarChart: UsitBarChart
                 
                 for j in 0...stackValues.count - 1 {
                     let arrayVals = stackValues[j] as? [NSNumber]
-                    let percent = CGFloat((arrayVals!)[i])/CGFloat(maxValue)
+                    let percent = CGFloat(truncating: (arrayVals!)[i])/CGFloat(maxValue)
                     
                     drawBar(CGPoint(x: x, y: y + innerChartMargin), to: CGPoint(x: x, y: y - totalHeight*percent + innerChartMargin), color: stackcolors[j] as! UIColor)
                     y = CGFloat(y - totalHeight*percent)

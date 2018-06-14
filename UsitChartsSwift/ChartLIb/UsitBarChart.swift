@@ -26,7 +26,7 @@ class UsitBarChart: UsitChart
             
             for i in 0...values.count - 1 {
                 let x = innerChartMargin + kChart.Margins.Left + width*CGFloat(i) - kChart.Sizes.barSpace
-                let percent = CGFloat(values[i] as! NSNumber)/CGFloat(maxValue)
+                let percent = CGFloat(truncating: values[i] as! NSNumber)/CGFloat(maxValue)
                 let totalHeight = viewChart.frame.size.height - innerChartMargin*2
                 
                 drawBar(CGPoint(x: x, y: totalHeight + innerChartMargin), to: CGPoint(x: x, y: totalHeight*(1 - percent) + innerChartMargin), color: kChart.Colors.BarBg)

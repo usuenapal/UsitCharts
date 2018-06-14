@@ -49,7 +49,7 @@ class UsitLineChart: UsitChart
         
         let path = UIBezierPath()
         path.move(to: at)
-        path.addArc(withCenter: at, radius:rad, startAngle: 0, endAngle:rad*CGFloat(M_PI), clockwise: true)
+        path.addArc(withCenter: at, radius:rad, startAngle: 0, endAngle:rad*CGFloat(Double.pi), clockwise: true)
         
         path.lineWidth = 1.0
         path.close()
@@ -71,7 +71,7 @@ class UsitLineChart: UsitChart
     {
         let width = kChart.Sizes.barSpace + kChart.Sizes.barWidth;
         let x = innerChartMargin + (width*CGFloat(i)) + width/2 + kChart.Sizes.pointRad
-        let percent = CGFloat(values[i] as! NSNumber)/CGFloat(maxValue)
+        let percent = CGFloat(truncating: values[i] as! NSNumber)/CGFloat(maxValue)
         let totalHeight = viewChart.frame.size.height - innerChartMargin*2
         
         return CGPoint(x: x, y: totalHeight*(1 - percent) + innerChartMargin)

@@ -43,8 +43,8 @@ class UsitCircleChart: UsitChart
     {
         let width = frame.size.width - (innerChartMargin*2)
         let center = CGPoint(x: frame.size.width/2.0, y: frame.size.height/2.0)
-        let start: CGFloat = -CGFloat(M_PI)/2.0
-        let end: CGFloat = CGFloat(M_PI*2.0)*CGFloat(percent/100.0) + start
+        let start: CGFloat = -CGFloat(Double.pi)/2.0
+        let end: CGFloat = CGFloat(Double.pi*2.0)*CGFloat(percent/100.0) + start
         let circlePath = UIBezierPath(arcCenter: center, radius: width/2, startAngle:start, endAngle:end , clockwise: true)
         
         let circleLayer = CAShapeLayer()

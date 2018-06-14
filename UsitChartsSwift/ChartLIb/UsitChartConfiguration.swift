@@ -18,7 +18,7 @@ struct kChart {
     }
     
     struct Colors {
-        static let Basic = UIColor.init(colorLiteralRed: 161/255, green: 192/255, blue: 87/255, alpha: 1)
+        static let Basic = UIColor.init(red: 161/255, green: 192/255, blue: 87/255, alpha: 1)
         static let AxisX = UIColor.black
         static let AxisY = UIColor.lightGray
         static let AxisXValues = UIColor.black
